@@ -147,13 +147,13 @@ loadPokemon();
 
 /**
  * Changes to make:
- * Make vertical list 2 items per row instead of one
- * Add background for each pokemon
- * Add pokeball-strip to left and right side
- * Make filter and sort option take less space
- * Instead of favorite list, make your favorite pokemon a filter option (therefore, delete the heart)
- * Extend the list of pokemon
- * Change the house icon and make it more obvious
+ * Make vertical list 3 pokemon per row instead of one, and make the pokemon take up more space
+ * Add forest.png as background for each pokemon
+ * Add pokeball-strip.png to left and right side
+ * Make filter and sort option take less space so that pokeball-strip.png can fit
+ * Instead of favorite list, make your favorite pokemon a filter option (therefore, delete the heart at the top right)
+ * Extend the list of pokemon so all pokemon from 1 to 1025 fit on the website
+ * Make the house icon more obvious at the top left
  * Add seperate page for the pokemon profile
  *  */ 
 
