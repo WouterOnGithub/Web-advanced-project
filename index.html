@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <header>
+      <button id="home-button">&#8962;</button>
+      <button id="favorites-button">❤</button>
+    </header>
+
+    <main>
+      <section id="search-sort-filter">
+        <input type="text" id="search" placeholder="Search Pokemon..." />
+        <select id="sort">
+          <option value="number-asc">Number (Low-High)</option>
+          <option value="number-desc">Number (High-Low)</option>
+          <option value="name-asc">Name (A-Z)</option>
+          <option value="name-desc">Name (Z-A)</option>
+
+        </select>
+        <select id="filter-type">
+          <option value="all">All Types</option>
+        </select>
+      </section>
+
+      <section id="pokemon-list"></section>
+      <section id="favorites-list" class="hidden"></section>
+      <section id="pokemon-profile" class="hidden"></section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+
