@@ -284,13 +284,16 @@ function showProfile(pokemon) {
       <div class="profile-main">
         <div class="pokemon-image-large">
           <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" id="sprite" />
-          <button id="toggle-shiny" class="toggle-shiny">⭐ Toggle Shiny</button>
+          <button id="toggle-shiny" class="toggle-shiny">
+            <span class="text">⭐ Toggle Shiny</span>
+          </button>
         </div>
         
         <div class="pokemon-details">
           <div class="pokemon-types">
             ${types}
           </div>
+          
           
           <div class="pokemon-measurements">
             <div class="measurement">
@@ -326,7 +329,8 @@ function showProfile(pokemon) {
     pokemonList.classList.remove('hidden');
   });
   
-  document.getElementById('toggle-shiny').addEventListener('click', () => {
+  const toggleShinyBtn = document.getElementById('toggle-shiny');
+  toggleShinyBtn.onclick = function() {
     const img = document.getElementById('sprite');
     const isDefault = img.src === pokemon.sprites.front_default;
     
@@ -335,7 +339,7 @@ function showProfile(pokemon) {
     } else {
       img.src = pokemon.sprites.front_default;
     }
-  });
+  };
   
   document.getElementById('favorite-btn').addEventListener('click', () => {
     toggleFavorite(pokemon.id);
@@ -360,10 +364,7 @@ loadPokemon();
 
 /**
  * Changes to make:
- * Add forest.png as background for each pokemon
- * Add pokeball-strip.png to left and right side
- * Make filter and sort option take less space so that pokeball-strip.png can fit
  * Add description to pokemon profile
- * Make pokemon sprites bigger and make box surrounding pokemon smaller
+ * 
  *  */ 
 
