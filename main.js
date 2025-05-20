@@ -246,19 +246,34 @@ function toggleFavorite(id) {
   renderList();
 }
 
-function showProfile(pokemon) {
+async function showProfile(pokemon) {
   pokemonList.classList.add('hidden');
   profileSection.classList.remove('hidden');
-  
+
+  // Get description from species endpoint
+  let description = 'No description available.';
+  try {
+    const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}/`);
+    const speciesData = await res.json();
+    const flavor = speciesData.flavor_text_entries.find(
+      entry => entry.language.name === 'en'
+    );
+    if (flavor) {
+      description = flavor.flavor_text.replace(/\f/g, ' ').replace(/\n/g, ' ');
+    }
+  } catch (error) {
+    console.error('Failed to fetch Pokémon description:', error);
+  }
+
   const types = pokemon.types.map(t => {
     const typeName = t.type.name;
     return `<div class="type-badge ${typeName}">${typeName.charAt(0).toUpperCase() + typeName.slice(1)}</div>`;
   }).join('');
-  
+
   const nextPokemon = allPokemon.find(p => p.id === pokemon.id + 1);
   const nextPokemonName = nextPokemon ? nextPokemon.name : '';
   const nextPokemonSprite = nextPokemon ? nextPokemon.sprites.front_default : '';
-  
+
   const stats = pokemon.stats.map(s => {
     const statName = s.stat.name.replace('-', ' ');
     return `
@@ -268,7 +283,7 @@ function showProfile(pokemon) {
       </div>
     `;
   }).join('');
-  
+
   profileSection.innerHTML = `
     <div class="profile-header">
       <button id="back-button" class="back-button">⬅️ Back</button>
@@ -294,7 +309,11 @@ function showProfile(pokemon) {
             ${types}
           </div>
           
-          
+          <div class="pokemon-description">
+            <h3>Description</h3>
+            <p>${description}</p>
+          </div>
+
           <div class="pokemon-measurements">
             <div class="measurement">
               <span class="label">Height:</span>
@@ -323,24 +342,24 @@ function showProfile(pokemon) {
       ` : ''}
     </div>
   `;
-  
+
   document.getElementById('back-button').addEventListener('click', () => {
     profileSection.classList.add('hidden');
     pokemonList.classList.remove('hidden');
   });
-  
+
   const toggleShinyBtn = document.getElementById('toggle-shiny');
   toggleShinyBtn.onclick = function() {
     const img = document.getElementById('sprite');
     const isDefault = img.src === pokemon.sprites.front_default;
-    
+
     if (isDefault && pokemon.sprites.front_shiny) {
       img.src = pokemon.sprites.front_shiny;
     } else {
       img.src = pokemon.sprites.front_default;
     }
   };
-  
+
   document.getElementById('favorite-btn').addEventListener('click', () => {
     toggleFavorite(pokemon.id);
     const btn = document.getElementById('favorite-btn');
@@ -352,7 +371,7 @@ function showProfile(pokemon) {
       btn.classList.remove('favorite');
     }
   });
-  
+
   if (nextPokemon) {
     document.querySelector('.next-pokemon-preview').addEventListener('click', () => {
       showProfile(nextPokemon);
@@ -363,8 +382,7 @@ function showProfile(pokemon) {
 loadPokemon();
 
 /**
- * Changes to make:
- * Add description to pokemon profile
- * 
+ * To do list:
+* Make readme file
  *  */ 
 

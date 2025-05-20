@@ -205,15 +205,9 @@ header {
 }
 
 @keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 .pagination {
@@ -477,4 +471,19 @@ button .text {
 
 .hidden {
   display: none;
+}
+
+.pokemon-description {
+  margin: 1rem 0;
+}
+
+.pokemon-description h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pokemon-description p {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
 }
