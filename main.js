@@ -7,6 +7,24 @@ const searchInput = document.getElementById('search');
 const homeBtn = document.getElementById('home-button');
 const showFavoritesCheckbox = document.getElementById('show-favorites');
 
+const imageObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const img = entry.target;
+      const src = img.dataset.src;
+      
+      if (src) {
+        img.src = src;
+        img.classList.add('loaded');
+        observer.unobserve(img);
+      }
+    }
+  });
+}, {
+  rootMargin: '50px',
+  threshold: 0.1
+});
+
 let allPokemon = [];
 let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
 let currentPage = 1;
@@ -43,7 +61,6 @@ async function loadPokemon() {
     const res = await fetch(API_URL);
     const data = await res.json();
     
-    //* In batches to prevent timeout
     const batches = [];
     for (let i = 0; i < data.results.length; i += 50) {
       batches.push(data.results.slice(i, i + 50));
@@ -77,6 +94,21 @@ function renderTypeOptions() {
     opt.textContent = t.charAt(0).toUpperCase() + t.slice(1);
     filterType.appendChild(opt);
   });
+}
+
+// Unused
+function validateSearchInput() {
+  const value = searchInput.value.trim();
+  
+  if (value.length < 2 && value.length > 0) {
+    searchError.textContent = 'Search term should be at least 2 characters';
+    searchInput.classList.add('invalid');
+    return false;
+  } else {
+    searchError.textContent = '';
+    searchInput.classList.remove('invalid');
+    return true;
+  }
 }
 
 function renderList() {
@@ -250,7 +282,6 @@ async function showProfile(pokemon) {
   pokemonList.classList.add('hidden');
   profileSection.classList.remove('hidden');
 
-  // Get description from species endpoint
   let description = 'No description available.';
   try {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${pokemon.id}/`);
@@ -381,9 +412,5 @@ async function showProfile(pokemon) {
 
 loadPokemon();
 
-/**
- * To do list:
-* Make readme file
-* Clean up code
-*/ 
+
 
