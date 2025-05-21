@@ -27,7 +27,7 @@ Opslag: localStorage voor favorieten
 <h2>2 - Gebruikte api's:</h2>
 https://pokeapi.co/
 
-<h2>Technische vereisten:</h2>
+<h2>3 - Technische vereisten:</h2>
 **DOM manipulatie**
 Elementen selecteren: 2–8
 Elementen manipuleren: 18, 44, 47, 50, 53, 56, 88, 91, 112, 122, 124, 134, 138, 142, 144, 146, 148, 150, 152, 154, 156, 160, 172, 230, 232, 235, 237, 249, 251
