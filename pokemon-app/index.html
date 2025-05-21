@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokédex</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preload" href="forest.png" as="image">
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <button id="home-button" class="home-button" title="Home">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg>
+        </button>
+        <h1>Pokédex</h1>
+      </div>
+    </header>
+
+    <main>
+      <section id="search-sort-filter">
+        <input type="text" id="search" placeholder="Search for..." />
+        <select id="filter-type">
+          <option value="all">Filter on...</option>
+        </select>
+        <select id="sort">
+          <option value="number-asc">Sort by Number (Low-High)</option>
+          <option value="number-desc">Sort by Number (High-Low)</option>
+          <option value="name-asc">Sort by Name (A-Z)</option>
+          <option value="name-desc">Sort by Name (Z-A)</option>
+        </select>
+        <label class="favorites-filter">
+          <input type="checkbox" id="show-favorites">
+          <span>Favorites Only</span>
+        </label>
+      </section>
+
+      <section id="pokemon-list"></section>
+      <section id="pokemon-profile" class="hidden"></section>
+    </main>
+
+    <script src="src/main.js"></script>
+  </body>
+</html>
