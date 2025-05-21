@@ -107,7 +107,10 @@ Zie screenshots folder
 https://www.w3schools.com/js/default.asp
 
 **Claude.ai**
-**Prompts:** I will give you some html, css and javascript code, and i want you to check the code for anything redundant or useless. If you find something, i want you to tell me where exactly you found it and why it is redundant or useless. 
+
+**Prompts:** 
+
+I will give you some html, css and javascript code, and i want you to check the code for anything redundant or useless. If you find something, i want you to tell me where exactly you found it and why it is redundant or useless. 
            I want you to check the following javascript code for the following javascript concepts. If anything is missing, tell me where and how to add it without breaking the website. (This prompt didn't exactly work)
              Concepts:  DOM manipulatie:  
                         Elementen selecteren
@@ -140,7 +143,9 @@ https://www.w3schools.com/js/default.asp
 
 
 **Chatgpt.com**
+
 **Prompts:**
+
 Hoe zou je het volgende project starten? Geef mij een stappenplan dat gemakkelijk te volgen is en duidelijk gestructureerd is. :
 
 Projectoverzicht
