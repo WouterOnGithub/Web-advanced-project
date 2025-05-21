@@ -10,11 +10,17 @@ Opslag: localStorage voor favorieten
 
 **Functionaliteiten:**
   Zoeken naar een Pokémon op naam
+  
   Sorteren op naam of nummer (ascending or descending)
+  
   Filteren op type (zoals bv Fire, Water, Grass, etc.)
+  
   Filteren op alleen favorieten
+  
   Pokémon als favoriet markeren of verwijderen uit favorieten door op het hart te klikken
+  
   De Pokemon profile openen van een Pokémon door op de kaart te klikken
+  
   In de Pokemon profile:
     De shiny-versie tonen van de Pokémon
     Informatie bekijken zoals types, beschrijving, stats, lengte en gewicht
@@ -22,6 +28,7 @@ Opslag: localStorage voor favorieten
     De volgende Pokémon bekijken via een preview (of naar de profile gaan als je op de image klikt)
     Teruggaan naar de lijst
   Bladeren door de lijst van Pokémon 
+  
   De webapp gebruiken op desktop, tablet of mobiel
 
 <h2>2 - Gebruikte api's:</h2>
@@ -67,7 +74,7 @@ Nu kun je aan de slag.
 
 
 <h2>5 - Screenshots:</h2>
-See screenshots folder
+Zie screenshots folder
 
 <h2>6 - Bronnen:</h2>
 
