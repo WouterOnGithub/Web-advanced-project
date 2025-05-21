@@ -27,7 +27,7 @@ Opslag: localStorage voor favorieten
 <h2>2 - Gebruikte api's:</h2>
 https://pokeapi.co/
 
-<h2>5 - Screenshots:</h2>h2>
+<h2>5 - Screenshots:</h2>
 See screenshots folder
 
 <h2>6 - Bronnen:</h2>
