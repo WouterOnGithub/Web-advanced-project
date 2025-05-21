@@ -300,7 +300,7 @@ async function showProfile(pokemon) {
         <div class="pokemon-image-large">
           <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" id="sprite" />
           <button id="toggle-shiny" class="toggle-shiny">
-            <span class="text">⭐ Toggle Shiny</span>
+            <span class="text">⭐ Show Shiny</span>
           </button>
         </div>
         
