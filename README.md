@@ -39,27 +39,42 @@ https://pokeapi.co/
 <h2>3 - Technische vereisten:</h2>
 **DOM manipulatie**
 Elementen selecteren: 2–8
+
 Elementen manipuleren: 18, 44, 47, 50, 53, 56, 88, 91, 112, 122, 124, 134, 138, 142, 144, 146, 148, 150, 152, 154, 156, 160, 172, 230, 232, 235, 237, 249, 251
+
 Events aan elementen koppelen: 18, 21, 24, 27, 30, 267, 280, 286, 292
 
 **Modern JavaScript**
 Gebruik van constanten: 1–8, 11, 13, 15, 17, 111, 113, 116, 135, 137, 141, 143, 145, 147, 149, 151, 153, 155, 159, 161, 171, 173, 176, 215, 219, 221, 225, 233, 243, 253, 268, 269, 271, 273, 275, 277, 279, 281, 284, 288
+
 Template literals: 165, 216, 224, 234, 240
+
 Iteratie over arrays: 13, 66, 113, 116, 135, 173, 219, 225
+
 Array methodes: 13, 66, 113, 116, 135, 173, 219, 225
+
 Arrow functions: 10, 11, 13, 18, 21, 24, 27, 30, 34, 44, 47, 50, 53, 56, 137, 141, 143, 145, 147, 149, 151, 153, 155, 159, 161, 268, 273, 279
+
 Conditional (ternary) operator: 166, 167, 281–282
+
 Callback functions: 13, 113
+
 Promises: 113
+
 Async & Await: 34, 36, 118, 213
+
 Observer API: 10
 
 **Data & API**
+
 Fetch om data op te halen: 36, 113, 213
+
 JSON manipuleren en weergeven: 37, 114, 215
 
 **Opslag & validatie**
+
 Formulier validatie: 89
+
 Gebruik van LocalStorage: 12, 261
 
 <h2> 4 - Installatiehandleiding</h2>
