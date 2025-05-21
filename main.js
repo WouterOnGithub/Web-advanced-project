@@ -384,5 +384,6 @@ loadPokemon();
 /**
  * To do list:
 * Make readme file
- *  */ 
+* Clean up code
+*/ 
 
