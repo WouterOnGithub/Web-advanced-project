@@ -22,11 +22,13 @@ Opslag: localStorage voor favorieten
   De Pokemon profile openen van een Pokémon door op de kaart te klikken
   
   In de Pokemon profile:
+  
     De shiny-versie tonen van de Pokémon
     Informatie bekijken zoals types, beschrijving, stats, lengte en gewicht
     De Pokémon als favoriet markeren
     De volgende Pokémon bekijken via een preview (of naar de profile gaan als je op de image klikt)
     Teruggaan naar de lijst
+    
   Bladeren door de lijst van Pokémon 
   
   De webapp gebruiken op desktop, tablet of mobiel
