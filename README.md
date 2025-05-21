@@ -53,6 +53,19 @@ JSON manipuleren en weergeven: 37, 114, 215
 Formulier validatie: 89
 Gebruik van LocalStorage: 12, 261
 
+<h2> 4 - Installatiehandleiding</h2>
+Vereisten
+Webbrowser (voorkeur: Chrome, Firefox, Edge of Safari)
+Webserver (optioneel, maar aanbevolen)
+Teksteditor (bv VSCode, VScodium, etc)
+
+Download folder: Pokemon-app
+Start live server (optioneel maar aanbevolen)
+Open de webpagina in je browser (via locale server of direct, ik gebruikte zelf vscodium met de live server extension)
+Zorg dat internet werkt
+Nu kun je aan de slag.
+
+
 <h2>5 - Screenshots:</h2>
 See screenshots folder
 
