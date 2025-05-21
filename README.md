@@ -78,15 +78,24 @@ Formulier validatie: 89
 Gebruik van LocalStorage: 12, 261
 
 <h2> 4 - Installatiehandleiding</h2>
-Vereisten
+Vereisten:
+
+
 Webbrowser (voorkeur: Chrome, Firefox, Edge of Safari)
+
 Webserver (optioneel, maar aanbevolen)
+
 Teksteditor (bv VSCode, VScodium, etc)
 
+
 Download folder: Pokemon-app
+
 Start live server (optioneel maar aanbevolen)
+
 Open de webpagina in je browser (via locale server of direct, ik gebruikte zelf vscodium met de live server extension)
+
 Zorg dat internet werkt
+
 Nu kun je aan de slag.
 
 
@@ -134,7 +143,7 @@ https://www.w3schools.com/js/default.asp
 **Prompts:**
 Hoe zou je het volgende project starten? Geef mij een stappenplan dat gemakkelijk te volgen is en duidelijk gestructureerd is. :
 
-Projectoverzicht 
+Projectoverzicht
 Voor het vak Advanced Web ga je een interactieve single-page webapplicatie bouwen die gebruik maakt van een API naar keuze. De applicatie moet gebruikers in staat stellen om data te verkennen, te filteren, te sorteren en op te slaan in persoonlijke collecties (favorieten). 
 
 Jullie applicatie moet de volgende functies bevatten: 
